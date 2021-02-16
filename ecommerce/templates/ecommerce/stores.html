@@ -3,52 +3,19 @@
 
 {% block content %}
         <div class="row">
-            <div class="col-lg-3">
-                <img class="image-style" src="{% static 'images/tv.jpg' %}" alt="">
+            {% for product in products %}
+            <div class="col-lg-4">
+                <img class="image-style" src="{{product.imageURL}}" alt="">
                 <!-----product/add to card/view/price section under image-->
                 <div class="box-element product">
-                <h6><strong>Product</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right;">$20</h4>
+                    <h6><strong>{{ product.name }}</strong></h6>
+                    <hr>
+                    <button class="btn btn-outline-secondary add-btn">Add to cart</button>
+                    <a class="btn btn-outline-success" href="#">View</a>
+                    <h4 style="display: inline-block; float: right;">${{ product.price|floatformat:2 }}</h4>
+                    <!--floatformat=makes it 2decimal places-->
+                </div>
             </div>
-            </div>
-    
-            <div class="col-lg-3">
-                <img class="image-style" src="{% static 'images/tv.jpg' %}" alt="">
-                <!-----product/add to card/view/price section under image-->
-                <div class="box-element product">
-                <h6><strong>Product</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right;">$20</h4>
-            </div>
-            </div>
-    
-            <div class="col-lg-3">
-                <img class="image-style" src="{% static 'images/tv.jpg' %}" alt="">
-                <!-----product/add to card/view/price section under image-->
-                <div class="box-element product">
-                <h6><strong>Product</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right;">$20</h4>
-            </div>
-            </div>
-    
-            <div class="col-lg-3">
-                <img class="image-style" src="{% static 'images/tv.jpg' %}" alt="">
-                <!-----product/add to card/view/price section under image-->
-                <div class="box-element product">
-                <h6><strong>Product</strong></h6>
-                <hr>
-                <button class="btn btn-outline-secondary add-btn">Add to cart</button>
-                <a class="btn btn-outline-success" href="#">View</a>
-                <h4 style="display: inline-block; float: right;">$20</h4>
-            </div>
-            </div>
-            </div>
+            {% endfor %}
+        </div>
 {% endblock %}

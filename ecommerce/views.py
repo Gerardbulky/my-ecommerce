@@ -1,18 +1,33 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import Customer, Product, Order, OrderItem, ShippingAddress
 
 # Create your views here.
+
 
 def base(request):
     context = {}
     return render(request, 'ecommerce/base.html', context)
 
+
 def stores(request):
-    context = {}
+    products = Product.objects.all()
+    context = {
+        'products': products
+    }
     return render(request, 'ecommerce/stores.html', context)
 
+
 def cart(request):
-    context = {}
+    if request.user.is_authenticated:
+        customer = request.user.customer
+        order, created = Order.objects.get_or_create(customer=customer, complete=True)
+        items = order.orderitem_set.all()
+    else:
+        items = []  
+
+    context = {'items': items, 'order': order}
     return render(request, 'ecommerce/cart.html', context)
+
 
 def checkout(request):
     context = {}
