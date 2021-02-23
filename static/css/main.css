@@ -1,9 +1,19 @@
-body{
-    background-color: rgb(243, 243, 250);
+body {
+    background-color: #fff;
+}
+.img-container {
+    background: url('/images/coverpage.jpg') no-repeat center center;
+    background-size: cover;
+    height: 39vw;
+    color: #555;
+    font-family: 'Lato';
 }
 
+#delivery-banner{
+    background-color: #d41c1c;
+}
 .upper-section{
-    margin-top: 25px;
+    padding: 25px;
 }
 
 #cart-icon{

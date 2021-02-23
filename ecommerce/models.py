@@ -17,15 +17,16 @@ class Customer(models.Model):
         return self.name
 
 
-class Product(models.Model):
-    name = models.CharField(max_length=200, null=True)
+class Product(models.Model):    
+    name = models.CharField(max_length=200)
     price = models.FloatField()
     digital = models.BooleanField(default=False, null=True, blank=False)
     image = models.ImageField(default=False, null=True, blank=True)
 
     def __str__(self):
         return self.name
-        
+
+      
 # this returns an empty image when pic is deleted instead of error
 
 
@@ -55,7 +56,7 @@ class Order(models.Model):
     transaction_id = models.CharField(max_length=200, null=True)
 
     def __str__(self):
-        return str(self.transaction_id)
+        return str(self.id)
 
 
 class OrderItem(models.Model):

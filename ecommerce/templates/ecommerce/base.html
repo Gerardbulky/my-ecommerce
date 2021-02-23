@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
         type="text/css">
@@ -27,7 +28,23 @@
                     <a class="nav-link" href="{% url 'stores' %}">Store<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
+             <!--------------------Search Our Site ------------------------>
+              <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                  <form method="GET" action="">
+                    <div class="input-group w-100">
+                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                        <div class="input-group-append">
+                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <span class="icon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+              </div>
             <!-----------------link to login page and cart-trolley page----------------------->
+            
             <div class="form-inline my-2 my-lg-0">
                 <a href="#" class="btn btn-warning">Login</a>
 
@@ -35,11 +52,29 @@
                     <img id="cart-icon" src="{% static 'images/cart.jpg' %}" alt="">
                 </a>
                 <!--card total-->
-                <p id="cart-total">0</p>     
-            </div>
+                <p id="cart-total">0</p>
+            </div>         
         </div>
     </nav>
-        <!-------------------------contents ---------------------------------------------------------->
+    <!---------------------image----------------------------------->
+<div class="img-container">
+    <div class="container h-100">
+        <div class="row h-100">
+            <div class="col-7 col-md-6 my-auto">
+                <h1 class="display-5 logo-font text-dark d-none d-md-block">
+                    WE'VE GOT YOU COVERED
+                </h1>
+                <div>
+                    <h4 class="my-5">
+                        <a href="#" class="shop-now-button btn btn-warning rounded-0 text-uppercase py3">Shop Now</a>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-------------------------contents ---------------------------------------------------------->
     
     <div class="container upper-section">
         {% block content %}
