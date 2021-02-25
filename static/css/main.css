@@ -1,6 +1,27 @@
 body {
     background-color: #fff;
 }
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+.head {
+    width: 100%;
+    display: inline-block;
+
+}
+.head-row {
+    background-color: white;
+}
+.head h1 {
+    padding: 0px 40px;
+    line-height: 100px;
+    font-size: 50px;
+    color: orange;
+}
+
 .img-container {
     background: url('/images/coverpage.jpg') no-repeat center center;
     background-size: cover;
