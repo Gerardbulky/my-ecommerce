@@ -46,16 +46,65 @@
     
     <!-------------------navbar---------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="{% url 'stores' %}">Ecommerce</a>
+      <!--  <a class="navbar-brand" href="{% url 'stores' %}">Home</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto mx-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'stores' %}">Store<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'stores' %}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cars</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Households
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="Kitchen Utensils"></a>
+                        <a class="dropdown-item" href="#">Carpets</a>
+                        <a class="dropdown-item" href="#">Chairs</a>
+                        <a class="dropdown-item" href="#">Tables</a>
+                        <a class="dropdown-item" href="#">Beds</a>
+                        <a class="dropdown-item" href="#">Fridges</a>
+                        <a class="dropdown-item" href="#">Microwaves</a>
+                        <a class="dropdown-item" href="#"></a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Household</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Electronics
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Televisions</a>
+                        <a class="dropdown-item" href="#">Radios</a>
+                        <a class="dropdown-item" href="#">Phones</a>
+                        <a class="dropdown-item" href="#">Labtops</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">All Electronics</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Bikes
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Bicycles</a>
+                        <a class="dropdown-item" href="#">Moter Bikes</a>
+                        <a class="dropdown-item" href="#">All Bikes</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Others</a>
                 </li>
             </ul>
              <!--------------------Search Our Site --------------------

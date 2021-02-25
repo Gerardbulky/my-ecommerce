@@ -7,6 +7,8 @@ body {
     margin: 0px;
 }
 
+
+
 .head {
     width: 100%;
     display: inline-block;
@@ -17,7 +19,7 @@ body {
 }
 .head h1 {
     padding: 0px 40px;
-    line-height: 100px;
+    line-height: 70px;
     font-size: 50px;
     color: orange;
 }
