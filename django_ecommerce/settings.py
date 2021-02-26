@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecommerce.apps.EcommerceConfig',
+    'cart.apps.CartConfig',   
 ]
 
 MIDDLEWARE = [
@@ -126,3 +127,4 @@ MEDIA_URL = '/images/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
 
+CART_SESSION_ID = 'cart'
