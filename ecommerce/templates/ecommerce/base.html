@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
         type="text/css">
@@ -16,10 +17,25 @@
 <body>
     <div class="head sticky-top" id="nav">
         <div class="row head-row">
-        <div class="title col-sm-4"><h1>MYBIZ</h1></div>
+            <!-----mobile header display---------------->
+            <div class="navbar-header container">
+           <div class="title left d-block d-md-none"><h1>MYBIZ</h1></div>
+           <div class="right my-2 my-lg-0 d-block d-md-none">
+               <i href="#" class="far fa-user"></i>
+                 
+                <a href="{% url 'cart' %}">
+                    <img id="cart-icon" src="{% static 'images/cart.jpg' %}" alt="">
+                </a> 
+
+                <!--card total
+                <p id="cart-total">0</p> -->
+              </div>  
+           </div>
+
+        <div class="title col-sm-4 d-none d-md-block"><h1>MYBIZ</h1></div>
         <!--------------------Search Our Site ------------------------>
-        <div class="col-12 col-sm-4 my-auto py-1 py-lg-0">
-                  <form method="GET" action="">
+        <div class="col-12 col-sm-4 my-auto py-1 py-lg-0 Search-icon">
+                  <form method="GET" action="#">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                         <div class="input-group-append">
@@ -33,12 +49,12 @@
                 </form>
               </div>
             <!-------------------link to login page and cart-trolley page ------------------------>
-                <div class="col-sm-4 form-inline my-2 my-lg-0">
+                <div class="col-sm-4 form-inline my-2 my-lg-0 login-page">
                     <a href="#" class="btn btn-warning">Login</a>
-
-                    <a href="{% url 'cart' %}">
+                    
+                <a href="{% url 'cart' %}">
                     <img id="cart-icon" src="{% static 'images/cart.jpg' %}" alt="">
-                </a>
+                </a> 
                 <!--card total-->
                 <p id="cart-total">0</p>
                 </div>
@@ -46,7 +62,6 @@
     
     <!-------------------navbar---------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <!--  <a class="navbar-brand" href="{% url 'stores' %}">Home</a> -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -143,9 +158,9 @@
 <div class="img-container d-none d-md-block">
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-5 logo-font text-dark d-none d-md-block">
-                    WE'VE GOT YOU COVERED
+            <div class="col-7 col-md-5 mb-auto">
+                <h1 class="display-6 logo-font text-dark d-none d-md-block">
+                    CHECK OUT THESE COLLECTIONS
                 </h1>
                 <div>
                     <h4 class="my-5">
@@ -156,6 +171,80 @@
         </div>
     </div>
 </div>
+<!-------------------------image galary ---------------------------------------------------------->
+<h1 class="display-6 logo-font text-dark text-center my-2">OUR COLLECTIONS</h1>
+<div class="container-fluid">
+<div class="row">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/car.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Cars Collections</h5>
+    <a href="#" class="btn btn-outline-secondary">More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/chairs.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Chairs Collection</h5>
+    <a href="#" class="btn btn-outline-secondary">More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/tables.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Tables Collection</h5>
+    <a href="#" class="btn btn-outline-secondary">More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="static/images/refrigerators.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Refrigerators Collections</h5>
+    <a href="#" class="btn btn-outline-secondary">More</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>
+</div>
+
 {% endblock %}
     <!-------------------------contents ---------------------------------------------------------->
     

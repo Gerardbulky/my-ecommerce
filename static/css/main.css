@@ -7,13 +7,38 @@ body {
     margin: 0px;
 }
 
+.card{
+  padding: 25px;
+  margin: 25px;
+}
 
+.card-img-top{
+  width: 100%;
+}
+
+.navbar-header {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    
+}
+
+.right i {
+    font-size: 20px;
+}
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
 
 .head {
     width: 100%;
     display: inline-block;
-
 }
+
 .head-row {
     background-color: white;
 }
@@ -113,4 +138,19 @@ body {
 
 .hidden{
 	display: none!important;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 767px){
+    .login-page{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 764px){
+    .Search-icon{
+        width: 100%;
+    }
+    
 }
